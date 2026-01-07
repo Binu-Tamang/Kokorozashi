@@ -1,22 +1,24 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 /* body {
     height: 100vh;
 } */
-
+section {
+  padding: 80px 0;
+}
 .hero {
-    position: relative;
-    height: 772px;
-    background: url("../img/Hero-banner.jpg") center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    padding-left: 80px;
-    color: white;
+  position: relative;
+  height: 772px;
+  background: url("../img/Hero-banner.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+  color: white;
 }
 
 /* Dark overlay on image */
@@ -27,94 +29,286 @@
 } */
 
 .content {
-    position: relative;
-    max-width: 600px;
-    z-index: 1;
+  position: relative;
+  max-width: 600px;
+  z-index: 1;
 }
 
 .subtitle {
-    font-size: 14px;
-    margin-bottom: 16px;
-    opacity: 0.9;
+  font-size: 14px;
+  margin-bottom: 16px;
+  opacity: 0.9;
 }
 
 h1 {
-    font-size: 56px;
-    font-weight: bold;
-    line-height: 1.2;
-    margin-bottom: 24px;
+  font-size: 56px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 24px;
 }
 
 .description {
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 32px;
-    opacity: 0.95;
-    font-weight: bold;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 32px;
+  opacity: 0.95;
+  font-weight: bold;
 }
 
 .buttons {
-    display: flex;
-    gap: 24px;
+  display: flex;
+  gap: 24px;
 }
 
 .primary-btn,
 .secondary-btn {
-    padding: 14px 28px;
-    font-size: 14px;
-    border-radius: 14px;
-    cursor: pointer;
-    font-weight: bold;
+  padding: 14px 28px;
+  font-size: 14px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .primary-btn {
-    background: white;
-    color: black;
-    border: 1px solid white;
+  background: white;
+  color: black;
+  border: 1px solid white;
 }
 
 .secondary-btn {
-    background: transparent;
-    color: white;
-    border: 1px solid white;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
 }
 
 /* Smooth transition for buttons */
 .primary-btn,
 .secondary-btn {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 /* Primary button hover */
-.primary-btn:hover {
-    background: transparent;
-    color: white;
-    border: 1px solid white;
+.primary-btn .banner-btn:hover {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
 }
-
+.primary-btn:hover {
+    border: 1px solid black;
+  }
 /* Secondary button hover */
 .secondary-btn:hover {
-    background: white;
-    color: black;
+  background: white;
+  color: black;
 }
 
 /* Brand logo css */
 .brand-section {
-    background: #fff;
-    padding: 40px 0;
-  }
-  
-  .brand-carousel .item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .brand-carousel img {
-    width: 114px;
-    height: 70px;
-    object-fit: contain;
-  }
-  
-  
+  background: #fff;
+  padding: 40px 0;
+}
+
+.brand-carousel .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-carousel img {
+  width: 114px;
+  height: 70px;
+  object-fit: contain;
+}
 /* Brand logo css */
+
+/* Crisis css */
+.crisis-section h2 {
+  font-weight: 900;
+}
+
+.crisis-section .badge {
+  font-weight: 700;
+}
+.crisis-box-wrapper {
+  max-width: 1036px;
+}
+.crisis-heading {
+  position: relative;
+  display: inline-block;
+  font-weight: 900;
+}
+
+.crisis-heading::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 4px;
+  background-color: #e60000;
+  margin-top: 10px;
+}
+
+/* Shift section css */
+.sub-head h2 {
+  position: relative;
+  display: inline-block;
+}
+.sub-head div {
+    text-transform: uppercase;
+}
+
+.sub-head h2::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 4px;
+  background-color: #e60000;
+  margin-top: 12px;
+}
+
+/* Section */
+.shift-section {
+  background: #ffffff;
+}
+
+/* Width control */
+.shift-box-wrapper {
+  max-width: 1000px;
+}
+
+/* Circles */
+.shift-circle {
+  width: 120px;
+  height: 120px;
+  border: 2px solid #ae0008;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 700;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.shift-arrow-img {
+  width: 40px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .shift-arrow-img {
+    display: none;
+  }
+}
+
+/* Founder css */
+/* Left profile */
+.profile-img {
+  border-radius: 20px;
+  width: 100%;
+  max-width: 320px;
+  object-fit: cover;
+  height: 317px;
+  object-position: top;
+}
+
+.founder-label {
+  color: #e60012;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 8px;
+}
+
+.founder-name {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.founder-desc {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #333;
+}
+
+/* Right media section */
+.media-box {
+  background: #f7f7f7;
+  border-radius: 28px;
+  padding: 40px;
+}
+
+.media-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #DFDFDF;
+}
+
+.media-item {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.media-text {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #333;
+  margin-right: 20px;
+}
+
+.media-logo {
+  font-weight: 800;
+  white-space: nowrap;
+  font-size: 18px;
+}
+
+.logo-nhk {
+  color: #e60012;
+}
+.logo-nikkei {
+  color: #003f98;
+}
+.logo-tbs {
+  color: #0051ff;
+}
+.logo-sankei {
+  color: #003366;
+}
+
+@media (max-width: 991px) {
+  .media-box {
+    margin-top: 40px;
+  }
+}
+.media-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px;
+}
+
+.media-logo-img {
+  max-height: 28px;
+  max-width: 100px;
+  object-fit: contain;
+}
+.logo-nhk img {
+  max-height: 48px;
+}
+.logo-nikkei img {
+  max-height: 28px;
+}
+.logo-tbs img {
+  max-height: 30px;
+}
+.logo-sankei img {
+  max-height: 34px;
+}
